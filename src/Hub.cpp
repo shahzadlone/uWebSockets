@@ -1,5 +1,5 @@
-#include "Hub.h"
-#include "HTTPSocket.h"
+#include "../include/Hub.h"
+#include "../include/HTTPSocket.h"
 #include <openssl/sha.h>
 #include <string>
 

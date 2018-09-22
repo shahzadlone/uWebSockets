@@ -8,6 +8,16 @@
 </div>
 
 #### Build optimized WebSocket & HTTP servers & clients in no time.
+
+This is a `wio` (uWebSockets) package for
+- platform(s): all
+- framework(s): all
+
+This package can be included as a wio dependency!
+
+```bash
+wio install uWebSockets
+```
 ```c++
 #include <uWS/uWS.h>
 using namespace uWS;

@@ -1,5 +1,5 @@
-#include "Group.h"
-#include "Hub.h"
+#include "../include/Group.h"
+#include "../include/Hub.h"
 
 namespace uWS {
 
