@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/tests.dir/home/shahzad/Desktop/Waterloop/wio/git/uWebSockets/tests/main.cpp.o  -o tests libuWebSockets__0__0.0.1.a 

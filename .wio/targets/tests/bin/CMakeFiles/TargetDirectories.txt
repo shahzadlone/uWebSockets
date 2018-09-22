@@ -1,0 +1,4 @@
+/home/shahzad/Desktop/Waterloop/wio/git/uWebSockets/.wio/targets/tests/bin/CMakeFiles/rebuild_cache.dir
+/home/shahzad/Desktop/Waterloop/wio/git/uWebSockets/.wio/targets/tests/bin/CMakeFiles/edit_cache.dir
+/home/shahzad/Desktop/Waterloop/wio/git/uWebSockets/.wio/targets/tests/bin/CMakeFiles/tests.dir
+/home/shahzad/Desktop/Waterloop/wio/git/uWebSockets/.wio/targets/tests/bin/CMakeFiles/uWebSockets__0__0.0.1.dir
