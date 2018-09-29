@@ -1,6 +1,7 @@
 CPP_SHARED := -std=c++11 -O3 -I src -shared -fPIC src/Extensions.cpp src/Group.cpp src/Networking.cpp src/Hub.cpp src/Node.cpp src/WebSocket.cpp src/HTTPSocket.cpp src/Socket.cpp src/Epoll.cpp src/Room.cpp
 CPP_OPENSSL_OSX := -L/usr/local/opt/openssl/lib -I/usr/local/opt/openssl/include
 CPP_OSX := -stdlib=libc++ -mmacosx-version-min=10.7 -undefined dynamic_lookup $(CPP_OPENSSL_OSX)
+SHARED_PATH := .
 
 default:
 	make `(uname -s)`
@@ -30,4 +31,4 @@ clean:
 	rm -f libuWS.dylib
 .PHONY: tests
 tests:
-	$(CXX) $(CPP_OPENSSL_OSX) -std=c++11 -O3 tests/main.cpp -Isrc -o testsBin -lpthread -L. -luWS -lssl -lcrypto -lz -luv
+	$(CXX) $(CPP_OPENSSL_OSX) -std=c++11 -O3 tests/main.cpp -Wl,-rpath,$(SHARED_PATH) -Isrc -o testsBin -lpthread -L. -luWS -lssl -lcrypto -lz -luv
