@@ -1,4 +1,4 @@
-#include "../include/Extensions.h"
+#include "Extensions.h"
 
 namespace uWS {
 

@@ -1,6 +1,6 @@
-#include "../include/WebSocket.h"
-#include "../include/Group.h"
-#include "../include/Hub.h"
+#include "WebSocket.h"
+#include "Group.h"
+#include "Hub.h"
 
 namespace uWS {
 

@@ -1,6 +1,6 @@
-#include "../include/HTTPSocket.h"
-#include "../include/Group.h"
-#include "../include/Extensions.h"
+#include "HTTPSocket.h"
+#include "Group.h"
+#include "Extensions.h"
 #include <cstdio>
 
 #define MAX_HEADERS 100

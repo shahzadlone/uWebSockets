@@ -1,5 +1,5 @@
-#include "../include/Group.h"
-#include "../include/Hub.h"
+#include "Group.h"
+#include "Hub.h"
 
 namespace uWS {
 
@@ -239,24 +239,18 @@ void Group<isServer>::broadcast(const char *message, size_t length, OpCode opCod
 
 template <bool isServer>
 void Group<isServer>::terminate() {
-    stopListening();
     forEach([](uWS::WebSocket<isServer> *ws) {
         ws->terminate();
     });
-    forEachHttpSocket([](HttpSocket<isServer> *httpSocket) {
-        httpSocket->terminate();
-    });
+    stopListening();
 }
 
 template <bool isServer>
 void Group<isServer>::close(int code, char *message, size_t length) {
-    stopListening();
     forEach([code, message, length](uWS::WebSocket<isServer> *ws) {
         ws->close(code, message, length);
     });
-    forEachHttpSocket([](HttpSocket<isServer> *httpSocket) {
-        httpSocket->shutdown();
-    });
+    stopListening();
     if (timer) {
         timer->stop();
         timer->close();
